@@ -20,3 +20,5 @@ docker volume rm nginxdata
 #To run nginx container with persistent volume
 #docker run -d --name nginx -v <<volume_name or host_path>>:<<mountable_path>> -p 8080:80 mynginx
 docker run -d --name nginx -v nginxdata:/var/log/nginx -p 8080:80 mynginx
+
+#To integrate github and jenkins, I have added a webhook in github to trigger jenkins job whenever there is any push in the repository.
